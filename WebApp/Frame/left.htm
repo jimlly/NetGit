@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Slashdot's Menu</title>
+    <script language="javascript" type="text/javascript" defer="defer">
+        function GotoMainUrl(obj)
+        {
+            if(obj=="sendsms"){url="../SendMsg/SendSms.aspx";}
+            parent.I2.src = url;
+        }
+                
+        function LeftGoto(src,target)
+        {
+            if(target=="_blank")
+            {
+                window.open(src,"打开新窗口");
+            }
+            else
+            {
+                parent.I2.location.href=src;
+            }
+        }
+        var door = "open";
+        function smsmarketing()
+        {
+            if( door == "close")
+            {
+                document.getElementById("smsmarketing").style.display = "block";
+                door = "open";
+            }
+            else if( door == "open")
+            {
+                document.getElementById("smsmarketing").style.display = "none";
+                door = "close";
+            }
+        }
+        
+        function MultiSend()
+        {
+            if( document.getElementById("MultiSend").style.display == "none")
+            {
+                document.getElementById("MultiSend").style.display = "block";
+                door = "open";
+            }
+            else 
+            {
+                document.getElementById("MultiSend").style.display = "none";
+                door = "close";
+            }
+        }
+        
+        var doorSetting = "open";
+        function Settings()
+        {
+            if( doorSetting == "close")
+            {
+                document.getElementById("Settings").style.display = "block";
+                doorSetting = "open";
+            }
+            else if( doorSetting == "open")
+            {
+                document.getElementById("Settings").style.display = "none";
+                doorSetting = "close";
+            }
+        }
+        
+        function GetSession()
+        {
+//            var sessionID = Frame_GetSession.GetSession("SessionID").value;
+//            var sessionKey = Frame_GetSession.GetSession("SessionKey").value;
+//            document.getElementById("ProductList").src =getUrl();// "http://192.168.0.36:8008/ProductList.aspx?SessionID=" + sessionID + "&SessionKey=" + sessionKey;
+            document.getElementById("ProductList").src ="http://192.168.0.36:8008/ProductList.aspx?SessionKey=a455187b-3014-4ce4-b81d-42fc4fa748c3&SessionID=044c45d8-0ac8-4c0d-a5b2-98068d7d4b5c";
+        }   
+        function getSessionKey()
+            {
+                  var aCookie = document.cookie.split("; ");
+                  for (var i=0; i < aCookie.length; i++)
+                  {
+                 
+                        var aCrumb = aCookie[i].split("=");
+                        if ("Session" == aCrumb[0]) 
+                        {
+                          var str=aCookie[i];
+                          str = str.replace("Session=","");
+                          str = str.replace("Key","SessionKey");
+                          str = str.replace("ID","SessionID");
+                          return str;     
+                        }  
+                  }
+                   return null;
+            }
+
+            function getUrl()
+            {
+                 url = "http://192.168.0.36:8008/ProductList.aspx?Session";
+           
+                var session = getSessionKey();
+               
+                if(session!=null)
+                {
+                  url = url.replace("Session",session);
+                 
+                }
+              
+             
+              return url;
+            }
+    </script>
+
+    <link href="../Images/sdmenu.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	background-image: url(../Images/leftbg2.gif);
+	background-repeat: repeat-y;
+	background-position: left;
+}
+-->
+  </style>
+</head>
+<body><!-- onload="return GetSession();">-->
+    <table width="171" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td>
+                <div style="float: left" id="my_menu" class="sdmenu">
+                    <div>
+                        <span style="cursor: hand">功能菜单</span>
+                        <a href="javascript:;" onclick="LeftGoto('../Home.aspx','I2')"><img src="../Images/user.gif" alt="" width="16" height="14" border="0" /> 用户信息</a>
+<!--                        <a href="javascript:;" onclick="window.open('../AddrLogin.aspx')"><img src="../Images/note.gif" alt="" width="16" height="14" border="0" /> 我的通讯录</a>-->
+                        <a href="javascript:;" onclick = "Settings()"><img src="../Images/settings.gif" alt="个人设置" width="16" height="14" border="0" /> 个人设置</a>
+                        <div id = "Settings">
+                        <a href="javascript:;" onclick="LeftGoto('../Settings/Signature.aspx','I2')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../Images/signature.gif" alt="" width="16" height="14" border="0" /> 短信签名</a>
+                        <a href="javascript:;" onclick="LeftGoto('../Settings/Setting_Phrase.aspx','I2')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../Images/phrase.gif" alt="" width="16" height="14" border="0" /> 常用短语</a>
+                        </div>
+                        <a href="javascript:;" onclick = "MultiSend()"><img src="../Images/qunfa.gif" alt="短信群发" width="16" height="14" border="0" /> 短信群发</a>
+                        <div id = "MultiSend">
+                        <a href="javascript:;" onclick="LeftGoto('../SendMsg/SendSms.aspx','I2')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../Images/senting.gif" alt="" width="16" height="14" border="0" /> 发送短信</a>
+                        <a href="javascript:;" onclick="LeftGoto('../SendMsg/SendList.aspx?IsDelete=0','I2')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../Images/waitsent.gif" alt="" width="16" height="14" border="0" /> 发件箱</a>
+                        <a href="javascript:;" onclick="LeftGoto('../SendMsg/SendList.aspx?IsDelete=1','I2')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../Images/sentfail.gif" alt="" width="16" height="14" border="0" /> 垃圾箱</a>
+                        </div>
+                      <!--  <a href="javascript:;" onclick = "smsmarketing()"><img src="../Images/yingxiao.gif" alt="短信营销" width="16" height="14" border="0" /> 短信营销</a>
+                        <div id = "smsmarketing">
+                        <a href="javascript:;" onclick="LeftGoto('../Smsmarketing/SendSms.aspx','I2')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../Images/senting.gif" alt="" width="16" height="14" border="0" /> 发送短信</a>
+                        <a href="javascript:;" onclick="LeftGoto('../Smsmarketing/SendView.aspx','I2')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../Images/waitsent.gif" alt="" width="16" height="14" border="0" /> 发件箱</a>
+                        </div>-->
+                    </div>                    
+                 </div>
+            </td>
+        </tr>
+        <!--<tr>
+            <td>
+                <iframe width="100%" height="500" name="bottomFrame" scrolling="No" id="ProductList" />
+            </td> 
+        </tr>-->
+    </table>
+</body>
+</html>
