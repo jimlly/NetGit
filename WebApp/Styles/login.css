@@ -1,0 +1,23 @@
+﻿*,html{ margin:0; padding:0}
+body{ margin:0; padding:0; font-size:12px; font-family:宋体, Verdana}
+ul{ list-style-type:none}
+from{ margin:0; padding:0}
+a{ text-decoration:none}
+img{ border:none}
+h1,h2,h3,h4,h5,h6{ font-size:12px}
+body{ background:url(../Images/login/login_bg_main.jpg) repeat-x; background-color:#357ad6}
+	#login_boxer{ margin:0 auto; width:603px; height:327px; }
+	.png{background:url(../Images/login/login_main_bg1.png) no-repeat}
+	#bg_tag{ margin:0 auto; width:603px; height:28px; overflow:hidden; }
+	.png2{background:url(../Images/login/bg_tag.png) no-repeat}
+	#logo{ width:108px; height:113px; overflow:hidden; float:left; margin-top:119px; margin-left:119px; _margin-left:58px}
+	#tag_img{ clear:both;width:134px; height:138px; overflow:hidden; position:absolute; z-index:999; margin-top:240px;  margin-left:500px;*margin-left:0px;}
+	
+	#boxer_from{ float:left; width:260px; margin-top:119px; margin-left:20px;}
+	#boxer_from input{ height:18px; border:1px solid #b6dbec; line-height:18px
+}
+	#boxer_from span{ padding-left:5px; padding-right:5px; color:#2b6f98}
+	#boxer_from .split{ height:10px; line-height:10px}
+	#boxer_from a{ display:block; height:27px; width:129px; overflow:hidden; margin-left:45px; cursor:pointer}
+	#boxer_from .png3{background:url(../Images/login/login_butn.png) no-repeat}	
+	#bg_tt{ display:block; background:url(../Images/login/imagecode.aspx) no-repeat; width:90px; height:50px; overflow:hidden; position:absolute; margin-left:190px; *margin-left:0px; margin-top:-20px;*margin-top:0px; cursor:pointer }

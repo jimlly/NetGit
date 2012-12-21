@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Fax99电子传真系统</title>
+    <meta http-equiv= "Expires" content= "0 "/> 
+    <meta http-equiv= "Cache-Control" content= "no-cache"/> 
+    <meta http-equiv= "Pragma" content= "no-cache"/> 
+    <link href="../Styles/base.css" rel="stylesheet" type="text/css"/>
+    <link href="../Styles/Default.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../JS/public.js"></script>
+    <script type="text/javascript" src="../JS/Login.js"></script>
+      <!-- ======以下是ajax的定义begin======-->
+    <script type="text/javascript" src="ajaxpro/prototype.ashx"></script>
+    <script type="text/javascript" src="ajaxpro/core.ashx"></script>
+    <script type="text/javascript" src="ajaxpro/converter.ashx"></script>
+    <script type="text/javascript" src="ajaxpro/ReceiveFaxAjax,App_Code.ashx"></script>
+    <script type="text/javascript" src="ajaxpro/LeftMenuAjax,App_Code.ashx"></script>
+     <script type="text/javascript" src="ajaxpro/ReceiveFaxAjax,App_Code.ashx"></script>
+        <script language="javascript" type="text/javascript" defer="defer">
+        function GotoMainUrl(obj)
+        {
+//            var suid =PublicAjax.GetSessionID().value;
+//            var serverip = PublicAjax.GetUserServerIp().value;
+            //if(obj=="sendfax"){url="http://"+serverip+"/webui/sentfax/SendSingleFax.aspx?id="+suid;}
+            if(obj=="sendfax"){url="SendFax/TransServer.aspx?SendType=1";}
+            if(obj=="recvfax"){
+//                if(m_FileType=="htm")
+//                {
+//                    url="ReceiveFax/ReceiveFax.htm";
+//                }
+//                else
+//                {
+                    url="ReceiveBox/ReceiveFaxList.aspx?IsDelete=0";
+//                }
+            }
+            parent.document.getElementById("main").src = url;
+        }
+        function GetNoReadBoxNum()
+        {
+            ReceiveFaxAjax.GetNoReadCount(OutHTMLDiv);
+            setTimeout('GetNoReadBoxNum();', 60000); 
+        }
+        function OutHTMLDiv(response)
+        {
+            if(response.value!=null && response.value!="")
+            {
+                var result = response.value;
+                var piArray = result.split(",");
+                if(piArray[0].toString()!="" && piArray[0].toString()!="0")
+                {
+                    noreadcount.innerHTML = "(<font color=\"red\">"+piArray[0].toString()+"份未读</font>)";
+                }else{
+                    noreadcount.innerHTML ="";
+                }
+//                if(piArray[1].toString()!="" && piArray[1].toString()!="0")
+//                {
+//                    trashnoreadcount.innerHTML = "(<font color=\"red\">"+piArray[1].toString()+"份未读</font>)";
+//                }else{
+//                    trashnoreadcount.innerHTML ="";
+//                }
+           }
+        }
+        function init()
+        {
+           //加载升级菜单
+           var result = LeftMenuAjax.LoadUpGrade().value;
+           if(result==""|| result==null)
+           {
+                upgrade.innerHTML ="";
+           }
+           else
+           {
+                upgrade.innerHTML =result;
+           }
+           //加载营销菜单
+           var yingxiao = LeftMenuAjax.LoadYX().value;
+           if(yingxiao==""|| yingxiao==null)
+           {    
+                yingXiao.innerHTML ="";
+           }
+           else
+           {
+                yingXiao.innerHTML =yingxiao;
+           }
+        }
+        function addmoneyinit()
+        {
+            //加载在线充值菜单
+           var resultadd = LeftMenuAjax.LoadAddMoney().value;
+           if(resultadd==""|| resultadd==null)
+           {
+                addmoney.innerHTML ="";
+           }
+           else
+           {
+                addmoney.innerHTML =resultadd;
+           }
+        }
+        GetNoReadBoxNum();
+        init();
+    </script>
+</head>
+<body class="leftbody_bg">
+<form name="TranForm" method="post" action="../SendFax/TransServer.aspx" target="main">
+</form>
+<div id="left">
+	<div class="left_top">
+		<ul>
+			<li class="l_left" title="发送短信" onclick="javascript:GotoMainUrl('recvfax');">发送短信</li>
+		</ul>
+	</div>
+	<div class="left_main">
+		<div class="B_Menu" id="B_Menu1">
+			<div class="B_Menu_Title" onclick="javascript:openmeun(1)"><a href="javascript:;">文件夹</a></div>
+			<div class="txtbox">
+				<div class="signitem"><a href="javascript:;" onclick="LeftGoto('../ReceiveBox/ReceiveFaxList.aspx?IsDelete=0','main')">收件箱</a><span id="noreadcount"></span></div>				
+	            <div class="signitem"><a href="javascript:;" onclick="LeftGoto('../ReceiveBox/ReceiveFaxList.aspx?IsDelete=0','main')">发件箱</a></div>
+				<div class="sMenuBox" id="S_Menu2">
+						<div class="moreitem" onclick="javascript:z_showMenu(2);"><a href="javascript:;">垃圾箱</a></div>
+						<div class="stxtBox">
+							 <div class="li"><a href="javascript:;" onclick="LeftGoto('../SendFax/SingleSend.aspx?IsDelete=1','main')">发送</a></div>
+							 <div class="li"><a href="javascript:;" onclick="LeftGoto('../ReceiveBox/ReceiveFaxList.aspx?IsDelete=1','main')">接收</a></div>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+ <script type="text/javascript">
+ function ExChgClsName(Obj,NameA,NameB){
+  var Obj=document.getElementById(Obj)?document.getElementById(Obj):Obj;
+  Obj.className=Obj.className==NameA?NameB:NameA;
+ }
+ function openmeun(iNo){
+	 for(var i=1;i<=4;i++)
+	 {
+		var obj = "B_Menu"+i;
+		var sObj=document.getElementById(obj)?document.getElementById(obj):obj;
+		sObj.className = "B_Menu2";
+	 }
+	 ExChgClsName("B_Menu"+iNo,"B_Menu","B_Menu2");
+ }
+ function showMenu(iNo) {
+    ExChgClsName("Menu_"+iNo,"MenuBox","MenuBox2");
+ }
+ function z_showMenu(iNo) {
+    ExChgClsName("S_Menu"+iNo,"sMenuBox","sMenuBox2");
+ }
+  function LeftGoto(src,target){
+    if(target=="_blank")
+    {
+        window.open(src,"打开新窗口");
+    }
+    else
+    {
+        parent.main.location.href=src;
+    }
+ }
+  function yingXiaoGoto(){
+    var result = LeftMenuAjax.GoToYX().value;
+    window.open(result,"打开新窗口");
+ }
+    </script>
+</body>
+</html>

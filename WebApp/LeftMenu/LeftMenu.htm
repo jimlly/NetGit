@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>短信平台</title>
+    <script language="javascript" type="text/javascript" defer="defer">
+        function GotoMainUrl(obj)
+        {
+            if(obj=="sendsms"){url="SendMsg/SendSms.aspx";}
+            parent.document.getElementById("main").src = url;
+        }
+                
+        function LeftGoto(src,target)
+        {
+            if(target=="_blank")
+            {
+                window.open(src,"打开新窗口");
+            }
+            else
+            {
+                parent.main.location.href=src;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id = "left">
+        <div id = "SendMsg">
+            <div class=""><a href="javascript:;" onclick = "javascript:GotoMainUrl('sendsms');">发送短信</a></div>
+        </div>
+        <div>
+            <div class="" onclick = ""><a href="javascript:;">文件夹</a></div>
+        </div>
+        <!--<div id = "ReceiveBox">
+            <div class="" onclick = ""><a href="javascript:;">收件箱</a></div>
+        </div>-->
+        <div id = "SendBox">
+            <div class=""><a href="javascript:;" onclick = "LeftGoto('../SendMsg/SendList.aspx?IsDelete=0','main')">发件箱</a></div>
+        </div>
+        <div>
+            <div class="" id = "DustBox"><a href="javascript:;" onclick = "">垃圾箱</a></div>
+            <div class="">
+	            <div class=""><a href="javascript:;" onclick="LeftGoto('../SendMsg/SendList.aspx?IsDelete=1','main')">发送</a></div>
+	            <!--<div class=""><a href="javascript:;" onclick="">接收</a></div>-->
+		    </div>
+		</div>
+    </div>
+</body>
+</html>

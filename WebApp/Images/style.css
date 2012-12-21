@@ -1,0 +1,344 @@
+BODY {
+	margin:0px;
+}
+table{}
+.onebian {
+	border-bottom:1px solid #cccccc;
+	background-color: #f7f7f7;
+	padding:0px;
+	line-height:24px;
+	color:#174B73;
+	font-size:12px;
+
+}
+
+TD {
+	FONT-SIZE: 12px; COLOR: #000000
+}
+.twobian {
+	border-top: 1px solid #1B85B5;
+	border-bottom: 1px solid #1B85B5;
+	background-color: #9FBFE3;
+	padding:0px;
+	font-size:12px;
+	line-height:24px;
+	
+
+}
+.bgzi{
+    color:#174B73;
+	font-weight:bold;}
+
+A {
+	COLOR: #174B73; TEXT-DECORATION: none;
+}
+A:hover {
+     text-decoration: underline;
+}
+
+.redt {
+
+	margin: 5px;
+	padding: 7px 5px 2px;
+	border: 0px none;
+	background-image: url(../photo/t2.gif);
+	font-size: 14px;
+}
+.black {
+	font-size: 14px;
+	color: #000000;
+	font-weight:bold;
+}
+.blackx {
+	font-size: 12px;
+	color: #000000;
+	font-weight:bold;
+}
+.redz {
+	font-size: 12px;
+	color: #CD021A;
+}
+.color1 {
+	font-size: 12px;
+	color: #A0CDFA;
+}
+.color2 {
+	font-size: 12px;
+	color: #FF6600;
+}
+.border1 {
+	border: 1px solid #CCCCCC;
+}
+.border3 {
+	border-right-width: 1px;
+	border-right-color: #CCCCCC;
+	background-color: #EEEEEE;
+	border-right-style: solid;
+	font-size: 12px;
+	line-height: 20px;
+	color: #3300FF;
+	font-family: "宋体";
+
+}
+.box1 {
+	background-color: #FFFFFF;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #0B3462;
+	border-right-color: #B1D9FF;
+	border-bottom-color: #B1D9FF;
+	border-left-color: #0B3462;
+	height: 18px;
+	width: 90px;
+	vertical-align: middle;
+	color: #000000;
+
+
+
+
+}
+.box11 {
+	background-color: #FFFFFF;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #0B3462;
+	border-right-color: #B1D9FF;
+	border-bottom-color: #B1D9FF;
+	border-left-color: #0B3462;
+	height: 18px;
+	width: 50px;
+	vertical-align: middle;
+	color: #000000;
+
+
+
+
+}
+.box2 {
+	background-color: #1D74C0;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #B1D9FF;
+	border-right-color: #0B3462;
+	border-bottom-color: #0B3462;
+	border-left-color: #B1D9FF;
+	height: 18px;
+	width: 70px;
+	font-size: 12px;
+	color: #FFFFFF;
+	vertical-align: middle;
+
+
+}
+.border2 {
+	border: 1px solid #CCCCCC;
+	background-color: #F0F0F0;
+	font-size: 12px;
+	font-style: normal;
+	line-height: 25px;
+	color: #FFFFFF;
+
+
+}
+.redz1 {
+	margin: 0px;
+	padding: 4px 5px 0px 8px;
+	height: 25px;
+	line-height: 20px;
+	font-family: "宋体";
+	font-size: 12px;
+	color: #000000;
+	border-top: 1px solid #F9C058;
+	border-right: 1px solid #F9C058;
+	border-bottom: 0px none;
+	border-left: 1px solid #F9C058;
+	background-image: url(../photo/t1.gif);
+
+
+}
+.right1 {
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: dotted;
+	border-left-color: #CCCCCC;
+	padding: 5px 8px;
+	line-height: 20px;
+
+
+}
+.search {
+	margin: 5px;
+	padding: 3px 5px 1px;
+	font-size: 12px;
+	height: 25px;
+	border-top: 1px dotted #CCCCCC;
+	border-right: 0px none;
+	border-bottom: 0px none;
+	border-left: 0px none;
+
+}
+.center1 {
+	padding-top: 5px;
+	padding-right: 8px;
+	padding-bottom: 5px;
+	padding-left: 8px;
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 20px;
+
+}
+.neirong {
+	font-family: "宋体";
+	font-size: 14px;
+	color: #000000;
+}
+.tdbgleftall {
+	background-color: 85C8FC;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #CCCCCC;
+
+}
+.titlelefttxt {
+	background-color: 2693D0;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+	line-height: 20px;
+	height: 25px;
+
+
+}
+.login {
+	background-color: #A7C9DC;
+	height: 18px;
+	width: 90px;
+}
+.hanggao {
+color:#174B73;
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 20px;
+}
+.titlemaintxt {
+	background-color: FF9900;
+	height: 25px;
+	margin-right: 0px;
+	padding-right: 0px;
+	margin-left: 0px;
+	padding-left: 5px;
+	font-family: "宋体";
+	font-size: 14px;
+	padding-top: 2px;
+
+
+
+
+}
+.l2top {
+
+	margin: 5px;
+	padding: 7px 5px 2px;
+	border: 0px none;
+	background-image: url(../photo/t1.gif);
+	font-size: 14px;
+	height: 25px;
+}
+.search1 {
+	margin: 3px;
+	padding: 3px 5px 1px;
+	font-size: 12px;
+	height: 25px;
+	border-top: 1px dotted #CCCCCC;
+	border-right: 0px none;
+	border-bottom: 0px none;
+	border-left: 0px none;
+	background-color: #CCCCCC;
+
+}
+.kuang {
+	margin: 0px;
+	padding: 0px;
+	line-height: 20px;
+
+}
+.kuang1 {
+	margin: 0px;
+	padding: 0px;
+	line-height: 20px;
+	text-indent: 1.5pc;
+}
+.kuang2 {
+	margin: 0px;
+	padding: 0px;
+	line-height: 20px;
+}
+.menu {
+	height: 25px;
+	width: 97px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #FFFFFF;
+	background-color: #6487DB;
+	font-family: "??";
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+	padding-top: 3px;
+	margin-top: 3px;
+}
+.menu1 {
+
+	height: 25px;
+	width: 97px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #FFFFFF;
+	background-color: #B6C5EE;
+	font-family: "??";
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+	padding-top: 3px;
+	margin-top: 3px;
+}
+.menu2 {
+
+	height: 25px;
+	width: 100px;
+	background-color: #F8FBD5;
+	border-bottom-color:#F8FBD5;
+	border-bottom-width: 1px;
+	border-bottom-style:dashed;
+	font-family: "??";
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+	padding-top: 3px;
+	margin-top: 3px;
+}
+input{}
+.blue1{
+     background: url(fax_inp.GIF);
+	 width:70px;
+	 height:21px;
+	 border:0px;}

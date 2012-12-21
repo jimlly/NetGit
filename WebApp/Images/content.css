@@ -1,0 +1,119 @@
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-size: 12px;
+}
+.STYLE1 {font-size: 12px}
+.STYLE4 {
+	font-size: 12px;
+	color: #1F4A65;
+	font-weight: bold;
+}
+
+a {
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+
+}
+
+a:hover {
+	font-size: 12px;
+	color: #FF0000;
+	text-decoration: underline;
+}
+.STYLE7 {font-size: 12px}
+.STYLE8 {font-size: 12px}
+.inputboder{
+	border: 0px none #FFFFFF;
+	color: #999999;
+	font-size: 12px;
+}
+.style2 {color: #003399}
+#list{
+	font-family: "ËÎÌו";
+	font-size: 12px;
+}
+#list .title{
+	color: #333333;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #CCCCCC;
+	font-weight: bold;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+}
+#list td{
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #E4E4E4;
+	padding-left: 5px;
+	text-align: left;
+}
+#maintitle{
+	background-color: #e6f5ff;
+	height: 20px;
+	border-top-width: 3px;
+	border-top-style: solid;
+	border-top-color: #c2e9f9;
+	border-bottom-color: #c2e9f9;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #006AB0;
+	padding-left: 25px;
+	padding-top: 5px;
+}
+#usermessages{
+	margin-top: 20px;
+	margin-left: 25px;
+}#content .title{
+	color: #333333;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #CCCCCC;
+	font-weight: bold;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+}
+#content td{
+	padding-left: 15px;
+	padding-right: 3px;
+	padding-top: 15px;
+	padding-bottom: 10px;
+}
+.noteout{
+	border: 1px solid #d0d0d0;
+	margin-left: 10px;
+	width: 80%;
+
+}
+.notein{
+	border: 3px solid #f3f8fc;
+	padding: 10px;
+		height:350px;
+}
+.title{
+	font-size: 13px;
+	font-weight: bold;
+	color: #0068b7;
+	text-align: center;
+	width: 100%;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #D0D0D0;
+	margin-bottom: 8px;
+	padding-bottom: 7px;
+}
+#titlecontent p{
+	text-indent: 2ex;
+	line-height: 180%;
+	margin-bottom: 4px;
+	margin-top: 4px;
+}
